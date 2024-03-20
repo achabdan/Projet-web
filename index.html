@@ -27,15 +27,22 @@
     </header>
     
     <main>
-        <div class="slider-text">
-            <h2>Games</h2>
-            
-        </div>
-        
-        <div class="w3-content w3-section" style="max-width:500px">
-            <img class="mySlides" src="img/photo slide1.jpg" style="width:90%">
-            <img class="mySlides" src="img/photo slide 2.jpg" style="width:100%">
-            <img class="mySlides" src="img/photo slide 3.jpg" style="width:100%">
+        <div class="slider-container">
+            <div class="menu">
+                <label for="slide-dot-1"></label>
+                <label for="slide-dot-2"></label>
+                <label for="slide-dot-3"></label>
+            </div>
+
+            <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+            <img class="slide-img" src="img/photo slide1.jpg">
+
+            <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+            <img class="slide-img" src="img/photo slide 2.jpg">
+
+            <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+            <img class="slide-img" src="img/photo slide 3.jpg">
+
         </div>
         
         <section>
@@ -58,22 +65,6 @@
         <p>© 2024 NBA Media Ventures, LLC. All rights reserved.</p>
     </footer>
     
-    <!-- Script du Slider -->
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
-    </script>
+   
 </body>
 </html>
