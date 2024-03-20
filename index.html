@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <title>NBA NEWS</title>
+        <div id="logo">
+            <img src="img\NBA logo.jpg" alt="logo" height="64" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Equipes NBA</a></li>
+                <li><a href="#">Joueurs NBA</a></li>
+                <li><a href="#">Classement NBA</a></li>
+                <li><a href="#">Calendrier NBA</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="slider-text">
+            <h2>Games</h2>
+            
+        </div>
+        
+        <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides" src="img/photo slide1.jpg" style="width:90%">
+            <img class="mySlides" src="img/photo slide 2.jpg" style="width:100%">
+            <img class="mySlides" src="img/photo slide 3.jpg" style="width:100%">
+        </div>
+        
+        <section>
+            <article class="grid-container">
+                <div class="grid-item">
+                    <img src="img/vignette 1.jpg" alt="logo" height="300" >
+                </div>
+                <div class="grid-item">
+                    <img src="img/vignette 2.jpg" alt="logo" height="300" >
+                </div>
+                <div class="grid-item">
+                    <img src="img/vignette 3.jpg" alt="logo" height="300" >
+                </div>
+            </article>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <p>© 2024 NBA Media Ventures, LLC. All rights reserved.</p>
+    </footer>
+    
+    <!-- Script du Slider -->
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
